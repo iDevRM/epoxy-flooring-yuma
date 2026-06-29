@@ -53,12 +53,7 @@ nav {
   padding: 5rem 1.5rem;
   position: relative; overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260') center/cover;
-  opacity: 0.18;
-}
+.hero::before { display: none; }
 .hero-inner { max-width: var(--max-w); margin: 0 auto; position: relative; }
 .hero-badge {
   display: inline-block; background: var(--orange);
