@@ -206,3 +206,17 @@ footer a[href^="tel"] { color: var(--orange); text-decoration: none; font-weight
   .steps { grid-template-columns: 1fr; }
   .hero-trust { flex-direction: column; gap: 0.75rem; }
 }
+
+
+/* ---------- SERVICES NAV DROPDOWN ---------- */
+.nav-links li.has-dropdown { position: relative; }
+.has-dropdown > a { display:inline-flex; align-items:center; gap:6px; }
+.has-dropdown > a::after { content:""; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid currentColor; }
+.dropdown-menu { display:none; position:absolute; top:100%; left:-18px; padding-top:16px; min-width:255px; z-index:300; }
+.has-dropdown:hover .dropdown-menu, .has-dropdown:focus-within .dropdown-menu { display:block; }
+.dropdown-menu-list { display:block; list-style:none; margin:0; padding:6px 0; background:#111827; border:1px solid rgba(255,255,255,.12); border-top:3px solid #ea7317; box-shadow:0 8px 24px rgba(0,0,0,.3); }
+.dropdown-menu-list li { display:block; }
+.dropdown-menu-list li + li { border-top:1px solid rgba(255,255,255,.08); }
+.dropdown-menu-list a { display:block; padding:11px 18px; color:#e5e7eb; font-size:.9rem; font-weight:500; white-space:nowrap; text-decoration:none; }
+.dropdown-menu-list a:hover { background:#1f2937; color:#fff; }
+@media (max-width: 860px) { .dropdown-menu { display:none !important; } .has-dropdown > a::after { display:none; } }
